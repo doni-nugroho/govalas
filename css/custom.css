@@ -1,0 +1,10 @@
+/* change footer-one color */
+.fancy-banner-three:before {
+  background: #28745c;
+  mix-blend-mode: multiply;
+}
+
+/* change footer one background */
+.footer-one {
+  background: #0a342b;
+}
