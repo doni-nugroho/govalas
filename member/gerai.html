@@ -77,10 +77,10 @@
 							<ul class="d-flex align-items-center style-none">
 								<li class="d-flex align-items-center login-btn-one me-3 me-md-0">
 									<img src="../images/lazy.svg" data-src="../images/icon/icon_16.svg" alt="" class="lazy-img icon me-2">
-									<a href="../#" data-bs-toggle="modal" data-bs-target="#loginModal" class="fw-500">Halo, Okta</a>
+									<a href="../member/profil.html" class="fw-500">Halo, Okta</a>
 								</li>
 								<li class="d-none d-md-inline-block ms-3 ms-lg-5 me-3 me-lg-0">
-									<a href="../#" data-bs-toggle="modal" data-bs-target="#loginModal" class="signup-btn-one icon-link">
+									<a href="../index.html" class="signup-btn-one icon-link">
 										<span>Log out</span>
 										<div class="icon rounded-circle d-flex align-items-center justify-content-center"><i
 												class="bi bi-arrow-right"></i></div>
@@ -108,10 +108,10 @@
 
 
 									<li class="nav-item">
-										<a class="nav-link" href="../inspiration.html" role="button">Inspirasi</a>
+										<a class="nav-link" href="../member/gerai.html" role="button">Gerai</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="../contact.html" role="button">Kontak</a>
+										<a class="nav-link" href="../member/transaksi.html" role="button">Transaksi</a>
 									</li>
 									<li class="d-md-none ps-2 pe-2">
 										<a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
@@ -145,7 +145,7 @@
 					-->
 		<div class="reg light-bg position-relative lg-pt-200 pb-100 sm-pb-50">
 			<div class="container">
-				<div class="row gx-xl-5 pt-200">
+				<div class="row gx-xl-5 pt-150">
 					<div class="col-lg-8">
 
 
@@ -159,65 +159,74 @@
 							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 						</div>
 
-
+						<h3 class="mb-30">Tambah Gerai Baru</h3>
 						<div class="row">
 							<div class="col-12">
-
-								<h3 class="mb-30">Daftar valuta asing yang dijual</h3>
-
-
 								<div id="formContainer">
-									<label for="nameInput">
-										Name:
-									</label>
-									<input type="text" id="nameInput" placeholder="Enter your name">
-									<label for="emailInput">
-										Email I'd:
-									</label>
-									<input type="email" id="emailInput" placeholder="Enter your email">
-									<label for="numberInput">
-										Mobile Details:
-									</label>
-									<input type="text" id="numberInput" placeholder="Enter your mobile details">
-									<label for="addressInput">
-										Address:
-									</label>
-									<textarea id="addressInput" placeholder="Enter your address">
-								        </textarea>
-									<button onclick="addData()">
+									<label for="nameInput">Name:	</label>
+									<div class="input-group mb-3">
+										<input class="form-control" type="text" id="nameInput" placeholder="Enter your name">
+									</div>
+									<label for="emailInput">Email I'd:</label>
+									<div class="input-group mb-3">
+										<input class="form-control" type="email" id="emailInput" placeholder="Enter your email">
+									</div>
+									<label for="numberInput">Mobile Details:</label>
+									<div class="input-group mb-3">
+										<input class="form-control" type="text" id="numberInput" placeholder="Enter your mobile details">
+									</div>
+									<label for="addressInput">Address:</label>
+									<div class="input-group mb-3">
+										<textarea class="form-control" id="addressInput" placeholder="Enter your address"></textarea>
+									</div>
+									<button onclick="addData()" class="btn-four mb-50">
 										Add
 									</button>
 								</div>
-								<table id="outputTable">
-									<tr>
-										<th>Name</th>
-										<th>Email</th>
-										<th>Mobile Details</th>
-										<th>Address</th>
-										<th>Action</th>
-									</tr>
+
+								<h3 class="">Daftar Gerai Anda</h3>
+								<table id="outputTable" class="styled-table mt-2" style="font-size: 15px;">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Email</th>
+											<th>Mobile Details</th>
+											<th>Address</th>
+											<th>Action</th>
+										</tr>
+										<tbody>
+											<tr>
+												<td>GoValas Concat</td>
+												<td>govalas-concat@gmail.com</td>
+												<td>0812 3456 7890</td>
+												<td>Jl Pahlawan No. 10</td>
+												<td>-</td>
+											</tr>
+										</tbody>
+									</thead>
 								</table>
-
-
-
-
-
-
-
-
-
-
-
-								<div class="form-style-one">
+								<div class="row justify-content-end mt-50">
+									<div class="col-sm-8">
+										<h3 class="mb-2">Daftar valuta asing yang dijual</h3>
+									</div>
+									<div class="col-sm-4">
+										<div class="input-group input-group-lgx">
+											<input type="text" id="myInput" class="form-control" placeholder="Kode valas" aria-label="Kode valas" aria-describedby="basic-addon1" onkeyup="filterValas()">
+											<span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="form-style-one">
 									<div class="input-group-meta form-group mb-30 ">
-										<input type="text" placeholder="input kode valas untuk menyaring daftar" name="name"
+  										<span class="input-group-text" id="basic-addon1">@</span>
+										<input type="text" class="w-50" placeholder="input kode valas untuk menyaring daftar" name="name"
 											required="required" id="myInput" onkeyup="filterValas()">
 									</div>
 
-								</div>
+								</div> -->
 
 
-								<table class="styled-table" id="myValasTable">
+								<table class="styled-table mt-2" id="myValasTable">
 									<thead>
 										<tr>
 											<th>Mata Uang</th>
@@ -288,27 +297,131 @@
 
 
 
+<!--
+				=====================================================
+					Fancy Banner Three
+				=====================================================
+				-->
+<div class="fancy-banner-three position-relative wow fadeInUp">
+	<div class="container">
+		<div class="row align-content-center">
+			<div class="col-lg-8 col-md-9">
+				<div class="title-one mb-20 lg-mb-10">
+					<h2 class="text-white">Mau ngobrol dulu? Mari, dengan senang hati</h2>
+				</div>
+				<!-- /.title-one -->
+				<p class="text-lg m0 text-white opacity-75">langsung hubungi tim kami jika ada yang ingin
+					ditanyakan.
+				</p>
+			</div>
+			<div class="col-lg-4 col-md-3">
+				<a href="../contact.html"
+					class="quote-btn tran5s rounded-circle d-flex align-items-center justify-content-center ms-auto">
+					<img src="../images/lazy.svg" data-src="../images/icon/icon_30.svg" alt="" class="lazy-img">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.fancy-banner-three -->
 
 
-		<!-- 
-        =============================================
-        	Cart Page
-        ============================================== 
-        -->
-		<div class="cart-section light-bg pt-250 lg-pt-200 pb-100 sm-pb-50">
-			<div class="container">
 
 
+<!--
+				=====================================================
+					Footer One
+				=====================================================
+				-->
+<div class="footer-one">
+	<div class="container">
+		<div class="inner-wrapper">
+			<div class="row justify-content-between">
+				<div class="col-xl-4 col-md-3 footer-intro mb-30">
+					<div class="logo mb-15">
+						<a href="../index.html" class="d-inline-block d-lg-none">
+							<img src="../images/logo/logo_01.svg" alt="">
+						</a>
+					</div>
+					<!-- logo -->
+					<p class="text-white lh-sm mb-35">Kantor Utama:<span class="opacity-50"><br>
+							Jl. Horizon Broadway No.11, Sampora, Tangerang, Banten 15345</span></p>
+					<ul class="style-none d-flex align-items-center social-icon">
+						<li><a href="#"><i class="bi bi-facebook"></i></a></li>
+						<li><a href="#"><i class="bi bi-dribbble"></i></a></li>
+						<li><a href="#"><i class="bi bi-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-xl-2 col-md-3 col-sm-4 mb-20 mt-10">
+					<!-- <h5 class="footer-title">goValas</h5> -->
+					<ul class="footer-nav-link style-none">
+						<li><a href="../index.html">Tentang</a></li>
+						<li><a href="../pricing.html">Layanan</a></li>
+						<li><a href="../about-us-v1.html">Inspirasi</a></li>
+					</ul>
+				</div>
+				<div class="col-xl-2 col-md-3 col-sm-4 mb-20 mt-10">
+					<!-- <h5 class="footer-title">Bergabung</h5> -->
+					<ul class="footer-nav-link style-none">
+						<li><a href="../about-us-v2.html">Keuntungan</a></li>
+						<li><a href="../about-us-v2.html">Money Changer</a></li>
+						<li><a href="../blog-v1.html">Personal</a></li>
 
+					</ul>
+				</div>
+				<div class="col-xl-2 col-md-3 col-sm-4 mb-20 mt-10">
+					<!-- <h5 class="footer-title">Dukungan</h5> -->
+					<ul class="footer-nav-link style-none">
+						<li><a href="../faq.html">FAQ</a></li>
+						<li><a href="../contact.html">Kontak</a></li>
+						<!-- <li><a href="term_conditions.html">Syarat &amp; ketentuan</a></li>
+										<li><a href="privacy_policy.html">Kebijakan privasi</a></li> -->
 
-
-
-
-			</div> <!-- /.container -->
-		</div> <!-- /.cart-section -->
-
-
-
+					</ul>
+				</div>
+			</div>
+		</div> <!-- /.inner-wrapper -->
+		<div class="pb-40">
+			<!-- extra space -->
+		</div>
+	</div>
+	<div class="container">
+		<div class="bottom-footer">
+			<div class="pt-40">
+				<!-- extra space -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-lg-5 order-lg-last mb-15">
+					<div class="footer-newsletter float-xl-end">
+						<!-- <h6 class="footer-title">Terima khabar terkini</h6> -->
+						<form action="#">
+							<input type="email" placeholder="masukkan email, terima info terkini">
+							<button><i class="bi bi-arrow-right"></i></button>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-7 order-lg-first mb-15">
+					<a href="../index.html" class="d-none d-lg-inline-block mb-25">
+						<img src="../images/logo/logo_01.svg" alt="" height="32">
+					</a>
+					<div class="d-xl-flex align-items-center">
+						<ul
+							class="style-none bottom-nav d-flex flex-wrap justify-content-center justify-content-lg-start order-lg-last">
+							<li><a href="">Kebijakan Privasi</a></li>
+							<li><a href="">Syarat &amp; Ketentuan</a></li>
+						</ul>
+						<div class="copyright me-xl-4 lg-mt-10 order-lg-first">Hak Cipta &copy;2023 goValas.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.bottom-footer -->
+		<div class="pb-40">
+			<!-- extra space -->
+		</div>
+	</div>
+</div>
 
 
 
