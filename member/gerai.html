@@ -159,32 +159,19 @@
 							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 						</div>
 
-						<h3 class="mb-30">Tambah Gerai Baru</h3>
 						<div class="row">
 							<div class="col-12">
-								<div id="formContainer">
-									<label for="nameInput">Name:	</label>
-									<div class="input-group mb-3">
-										<input class="form-control" type="text" id="nameInput" placeholder="Enter your name">
+								<div class="row">
+									<div class="col-sm-8">
+										<h3 class="">Daftar Gerai Anda</h3>
 									</div>
-									<label for="emailInput">Email I'd:</label>
-									<div class="input-group mb-3">
-										<input class="form-control" type="email" id="emailInput" placeholder="Enter your email">
+									<div class="col-sm-4 text-end">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-four rounded lh-1 py-2 px-3 fs-6" data-bs-toggle="modal" data-bs-target="#modalGerai">
+											Tambah
+										</button>
 									</div>
-									<label for="numberInput">Mobile Details:</label>
-									<div class="input-group mb-3">
-										<input class="form-control" type="text" id="numberInput" placeholder="Enter your mobile details">
-									</div>
-									<label for="addressInput">Address:</label>
-									<div class="input-group mb-3">
-										<textarea class="form-control" id="addressInput" placeholder="Enter your address"></textarea>
-									</div>
-									<button onclick="addData()" class="btn-four mb-50">
-										Add
-									</button>
 								</div>
-
-								<h3 class="">Daftar Gerai Anda</h3>
 								<table id="outputTable" class="styled-table mt-2" style="font-size: 15px;">
 									<thead>
 										<tr>
@@ -205,15 +192,56 @@
 										</tbody>
 									</thead>
 								</table>
-								<div class="row justify-content-end mt-50">
-									<div class="col-sm-8">
-										<h3 class="mb-2">Daftar valuta asing yang dijual</h3>
-									</div>
-									<div class="col-sm-4">
-										<div class="input-group input-group-lgx">
-											<input type="text" id="myInput" class="form-control" placeholder="Kode valas" aria-label="Kode valas" aria-describedby="basic-addon1" onkeyup="filterValas()">
-											<span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+								<!-- Modal -->
+								<div class="modal fade" id="modalGerai" tabindex="-1" aria-labelledby="modalGeraiLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="modalGeraiLabel">Tambah Gerai Baru</h4>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<div id="formContainer">
+													<label for="nameInput">Name: </label>
+													<div class="input-group mb-3">
+														<input class="form-control" type="text" id="nameInput" placeholder="Enter your name">
+													</div>
+													<label for="emailInput">Email I'd:</label>
+													<div class="input-group mb-3">
+														<input class="form-control" type="email" id="emailInput" placeholder="Enter your email">
+													</div>
+													<label for="numberInput">Mobile Details:</label>
+													<div class="input-group mb-3">
+														<input class="form-control" type="text" id="numberInput" placeholder="Enter your mobile details">
+													</div>
+													<label for="addressInput">Address:</label>
+													<div class="input-group mb-3">
+														<textarea class="form-control" id="addressInput" placeholder="Enter your address"></textarea>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary" onclick="addData()">Save</button>
+											</div>
 										</div>
+									</div>
+								</div>
+
+
+								<div class="row justify-content-end mt-50">
+									<h3 class="mb-2">Daftar ask/bid valuta asing</h3>
+									<div class="col-sm-6"><div class="input-group input-group-lgx">
+										<input type="text" id="myInput" class="form-control" placeholder="Kode valas" aria-label="Kode valas"
+											aria-describedby="basic-addon1" onkeyup="filterValas()">
+										<span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+									</div>
+									</div>
+									<div class="col-sm-6 text-end">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-four rounded lh-1 py-2 px-3 fs-6" data-bs-toggle="modal" data-bs-target="#modalValas">
+											Tambah
+										</button>
 									</div>
 								</div>
 								<!-- <div class="form-style-one">
@@ -229,40 +257,107 @@
 								<table class="styled-table mt-2" id="myValasTable">
 									<thead>
 										<tr>
+											<th>Area</th>
+											<th>Gerai</th>
+											<th>Transaksi</th>
 											<th>Mata Uang</th>
-											<th>Ketersediaan</th>
-											<th>Jual</th>
-											<th>Beli</th>
+											<th>Qty</th>
+											<th>Harga</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
+											<td>Jogja</td>
+											<td>GoValas Concat</td>
+											<td>Beli</td>
 											<td>USD</td>
 											<td>6000</td>
-											<td>15000</td>
-											<td>15000</td>
+											<td>14000</td>
 										</tr>
 										<tr class="active-row">
+											<td>Jogja</td>
+											<td>GoValas Concat</td>
+											<td>Jual</td>
 											<td>SGD</td>
 											<td>5150</td>
 											<td>15000</td>
-											<td>15000</td>
 										</tr>
 										<tr>
+											<td>Jogja</td>
+											<td>GoValas Concat</td>
+											<td>Beli</td>
 											<td>DEL</td>
 											<td>6000</td>
-											<td>15000</td>
-											<td>15000</td>
+											<td>14000</td>
 										</tr>
 										<tr class="disabled-row">
+											<td>Jogja</td>
+											<td>GoValas Concat</td>
+											<td>Jual</td>
 											<td>RUP</td>
 											<td>6000</td>
-											<td>15000</td>
 											<td>15000</td>
 										</tr>
 										<!-- and so on... -->
 									</tbody>
 								</table>
+								<!-- Modal -->
+								<div class="modal fade" id="modalValas" tabindex="-1" aria-labelledby="modalValasLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="modalValasLabel">Tambah Aks/Bid Valas</h4>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<div id="formContainer">
+													<label for="areaInput">Area: </label>
+													<div class="input-group mb-3">
+														<select id="areaInput" class="form-control">
+															<option value="Jogja">Jogja</option>
+															<option value="Bali">Bali</option>
+															<option value="Lombok">Lombok</option>
+														</select>
+													</div>
+													<label for="geraiInput">Gerai: </label>
+													<div class="input-group mb-3">
+														<select id="geraiInput" class="form-control">
+															<option value="GoValas Concat">GoValas Concat</option>
+														</select>
+													</div>
+													<label for="transaksiInput">Transaksi: </label>
+													<div class="input-group mb-3">
+														<select id="transaksiInput" class="form-control">
+															<option value="Beli">Beli</option>
+															<option value="Jual">Jual</option>
+														</select>
+													</div>
+													<label for="mataUangInput">Mata Uang: </label>
+													<div class="input-group mb-3">
+														<select id="mataUangInput" class="form-control">
+															<option value="USD">USD</option>
+															<option value="IDR">IDR</option>
+															<option value="SGD">SGD</option>
+															<option value="DEL">DEL</option>
+														</select>
+													</div>
+													<label for="qtyInput">Qty:</label>
+													<div class="input-group mb-3">
+														<input class="form-control" type="text" id="qtyInput" placeholder="qty">
+													</div>
+													<label for="hargaInput">Harga:</label>
+													<div class="input-group mb-3">
+														<input class="form-control" type="text" id="hargaInput" placeholder="harga">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary">Save</button>
+											</div>
+										</div>
+									</div>
+								</div>
 
 							</div>
 						</div>
@@ -523,7 +618,7 @@
 				table = document.getElementById("myValasTable");
 				tr = table.getElementsByTagName("tr");
 				for (i = 0; i < tr.length; i++) {
-					td = tr[i].getElementsByTagName("td")[0];
+					td = tr[i].getElementsByTagName("td")[1];
 					if (td) {
 						txtValue = td.textContent || td.innerText;
 						if (txtValue.toUpperCase().indexOf(filter) > -1) {

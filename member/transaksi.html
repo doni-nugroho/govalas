@@ -162,6 +162,10 @@
                             <h4 class="mb-0 fs-5"><b>Sukses!</b> Akun anda berhasil berlangganan Business Plan</h4>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
+                        <div id="alert-req-transaksi" class="alert alert-success alert-dismissible fade show mb-4" role="alert" style="display: none;">
+                            <h4 class="mb-0 fs-5"><b>Sukses!</b> Request transaksi telah dikirim</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
 
                         <div class="row">
                             <div class="col-12">
@@ -599,6 +603,8 @@
                     document.getElementById("alert-top-up").style.display = 'block';
                 }else if (act == 'subscribe' && status == '1') {
                     document.getElementById("alert-subscribe").style.display = 'block';
+                } else if (act == 'req-transaksi' && status == '1') {
+                    document.getElementById("alert-req-transaksi").style.display = 'block';
                 }
             });
         </script>
