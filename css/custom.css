@@ -1,3 +1,7 @@
+.fs-14 {
+  font-size: 14px !important;
+}
+
 /* change footer-one color */
 .fancy-banner-three:before {
   background: #28745c;
@@ -7,4 +11,191 @@
 /* change footer one background */
 .footer-one {
   background: #0a342b;
+}
+.dash-menu .col {
+  padding: 10px;
+}
+.dash-menu-item {
+  display: flex;
+  padding: 22px;
+  flex-direction: column;
+  /* align-items: center; */
+  border-radius: 20px;
+  background: #fcfcfc;
+  box-shadow: 0px 4px 10px -2px rgba(12, 58, 48, 0.05),
+    0px -1px 4px 0px rgba(0, 0, 0, 0.05) inset;
+  height: 100%;
+}
+.dash-menu-item .dash-menu-heading {
+  color: #0c3a30;
+  font-family: Satoshi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.dash-menu-item p {
+  color: #0c3a30;
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.square-110 {
+  width: 110px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dash-menu-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.bg-kusam {
+  background-color: #edf1ee;
+}
+.nav-item.dropdown {
+  position: relative;
+}
+.nav-item.dropdown > .nav-link span {
+  display: flex;
+}
+.nav-item.dropdown > .nav-link span::after {
+  /* position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%); */
+  content: "\F282";
+  font-family: "bootstrap-icons";
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 8px;
+  padding-top: 4px;
+}
+.breadcrumb .breadcrumb-item {
+  color: rgba(25, 53, 45, 0.64);
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.breadcrumb .breadcrumb-item::before {
+  font-family: "bootstrap-icons";
+  font-size: 10px;
+  padding-top: 4px;
+  font-weight: bold;
+  color: #19352d;
+}
+.breadcrumb .breadcrumb-item:last-child {
+  color: #19352d;
+}
+ul.pagination {
+  margin-bottom: 0;
+}
+.dashboard.navbar-nav {
+  column-gap: 57px;
+}
+.dataTable thead th::before,
+.dataTable thead th::after {
+  font-size: 9px !important;
+}
+.dataTable thead th,
+.dataTable thead td {
+  border-bottom: 0.95px solid rgba(0, 0, 0, 0.16);
+  background: #f6f6f6;
+  color: #000;
+  font-family: Satoshi;
+  font-size: 13.3px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 15.2px 38px !important;
+}
+.dataTables_filter {
+  text-align: end;
+}
+.dataTables_info {
+  padding-top: 0 !important;
+  color: #000;
+  font-family: Satoshi;
+  font-size: 13.3px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.dataTables_filter input::-webkit-input-placeholder {
+  color: #000 !important;
+}
+
+.dataTables_filter input::-moz-placeholder {
+  color: #000 !important;
+}
+
+.dataTables_filter input::-ms-placeholder {
+  color: #000 !important;
+}
+
+.dataTables_filter input::placeholder {
+  color: #000 !important;
+}
+.dataTables_length select {
+  padding: 4px 28px 4px 14px;
+  background-position: right 12px center;
+  text-align: center;
+}
+.dataTable tbody th,
+.dataTable tbody td {
+  color: #000;
+  font-family: Satoshi;
+  font-size: 13.3px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.dataTables_paginate .pagination .page-item .page-link {
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3.8px;
+  border: 0.95px solid #0c3a30;
+  color: #0c3a30;
+}
+.active > .page-link,
+.page-link.active,
+.page-link:hover {
+  background-color: #ffdb1e;
+}
+.table-container {
+  padding: 19px 30.4px;
+  border-radius: 11.4px;
+  background: #fcfcfc;
+}
+.table-title {
+  color: #000;
+  font-family: Satoshi;
+  font-size: 22.8px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 1199px) {
+  .dashboard.navbar-nav {
+    column-gap: 32px;
+  }
+}
+@media (max-width: 991px) {
+  .nav-item.dropdown > .nav-link span::after {
+    display: none;
+  }
 }
