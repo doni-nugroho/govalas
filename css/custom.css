@@ -160,6 +160,10 @@ ul.pagination {
   font-weight: 500;
   line-height: normal;
 }
+.dataTables_paginate .pagination .page-item {
+  margin-left: 2px;
+  margin-right: 2px;
+}
 .dataTables_paginate .pagination .page-item .page-link {
   padding: 0;
   width: 35px;
