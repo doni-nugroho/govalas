@@ -118,6 +118,7 @@ ul.pagination {
   font-weight: 700;
   line-height: normal;
   padding: 15.2px 38px !important;
+  min-width: 24px;
 }
 .dataTables_filter {
   text-align: end;
@@ -159,6 +160,7 @@ ul.pagination {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  background-color: transparent;
 }
 .dataTables_paginate .pagination .page-item {
   margin-left: 2px;
@@ -175,6 +177,12 @@ ul.pagination {
   border: 0.95px solid #0c3a30;
   color: #0c3a30;
 }
+
+.dataTables_paginate .pagination .page-item.previous .page-link,
+.dataTables_paginate .pagination .page-item.next .page-link {
+  width: unset;
+  padding: 0 13px;
+}
 .active > .page-link,
 .page-link.active,
 .page-link:hover {
@@ -184,6 +192,7 @@ ul.pagination {
   padding: 19px 30.4px;
   border-radius: 11.4px;
   background: #fcfcfc;
+  overflow: hidden;
 }
 .table-title {
   color: #000;
@@ -193,6 +202,375 @@ ul.pagination {
   font-weight: 700;
   line-height: normal;
 }
+.menu-pos a {
+  padding: 7.601px 30.402px;
+  border-radius: 3.8px;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 15.201px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.menu-pos .link-penjualan {
+  background: #ea5455;
+}
+.menu-pos .link-pembelian {
+  background: #ff9f43;
+}
+.menu-pos .link-customer {
+  background: #38b8bb;
+}
+#pos {
+  display: flex;
+  flex-direction: column;
+  gap: 38.003px;
+}
+.filter-customer select {
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='10' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/%3E%3C/svg%3E");
+}
+.customer-detail {
+  padding-bottom: 38px;
+  border-bottom: 0.95px solid rgba(12, 58, 48, 0.16);
+}
+.customer-detail label {
+  color: #000;
+  font-family: Satoshi;
+  font-size: 15.201px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.customer-detail input {
+  border-radius: 3.8px;
+  background: #f6f6f6;
+  border: 1px solid #f6f6f6;
+}
+.link-stock a {
+  display: flex;
+  padding: 8px 18px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  background: #04a3c2;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.link-stock > .col:last-child a {
+  background: #ff9f43;
+}
+
+.link-stock a .mata-uang {
+  color: #ffdb1e;
+  font-size: 19px;
+}
+.pos-tfoot {
+  background-color: #f6f6f6;
+}
+#table-pos_wrapper .pos-tfoot .pagination {
+  display: flex;
+  justify-content: space-between !important;
+}
+#table-pos_wrapper .pagination .page-item.previous .page-link,
+#table-pos_wrapper .pagination .page-item.next .page-link {
+  display: flex;
+  padding: 7.601px 13.301px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 3.8px;
+  border: 0.95px solid rgba(0, 0, 0, 0.16);
+  color: #000;
+  font-family: Satoshi;
+  font-size: 13.301px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.badge-approved {
+  background: #28c76f;
+  color: #ffffff;
+}
+
+/* custom checkbox */
+/* The container */
+.container-checkbox {
+  display: inline;
+  position: relative;
+  /* padding-left: 35px; */
+  /* margin-bottom: 12px; */
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  border-radius: 5.7px;
+  border: 0.95px solid #d0d5dd;
+  transform: translate(-50%, -50%);
+  color: #38b8bb;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .checkmark {
+  /* background-color: #ccc; */
+  border-color: #38b8bb;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+  /* background-color: #2196f3; */
+  border-color: #38b8bb;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 50%;
+  top: 45%;
+  width: 5px;
+  height: 10px;
+  border: solid #38b8bb;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+/* custom checkbox */
+#pos-total label {
+  font-family: Satoshi;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color: #000;
+}
+#pos-total input {
+  border-radius: 3.8px;
+  background: #f6f6f6;
+  border: 1px solid #f6f6f6;
+}
+#pos-total .total {
+  font-family: Satoshi;
+  font-size: 38px;
+  font-weight: 700;
+  color: #ea5455;
+}
+#pos-total .link-pembayaran a {
+  display: flex;
+  padding: 7.601px 30.402px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.601px;
+  border-radius: 3.8px;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 15.201px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#pos-total .link-pembayaran a.tunai {
+  background: #ea5455;
+}
+#pos-total .link-pembayaran a.mandiri {
+  background: #0c2c5a;
+}
+#pos-total .link-pembayaran a.bca {
+  background: #0061b0;
+}
+#pos-total .link-pembayaran a.qris {
+  background: #252525;
+}
+#pos-total .button-action-total a {
+  display: flex;
+  padding: 9.501px 83.606px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.601px;
+  font-family: Satoshi;
+  font-size: 13.301px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 3.8px;
+}
+#pos-total .button-action-total a.kembali {
+  color: #000;
+  border: 0.95px solid rgba(0, 0, 0, 0.16);
+}
+#pos-total .button-action-total a.simpan-cetak {
+  color: #fff;
+  background: #28c76f;
+  border: 0.95px solid #28c76f;
+}
+#login-page {
+  padding-top: 150px;
+}
+#login-page h1 {
+  color: #0c3a30;
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+#login-page h2 {
+  font-family: Satoshi;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+}
+#login-page p {
+  color: #0c3a30;
+  font-family: Satoshi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#login-page label {
+  color: rgba(12, 58, 48, 0.64);
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+#login-page input {
+  display: flex;
+  padding: 9px 15px 12px 15px;
+  align-items: center;
+  border-radius: 8px;
+  background: #fcfcfc;
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.05),
+    0px -1px 4px 0px rgba(0, 0, 0, 0.05) inset;
+}
+
+#login-page input:focus {
+  border-color: #185b4d;
+}
+#login-page input::placeholder {
+  color: #c4c4c4;
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#login-page .forget-password {
+  color: #0c3a30;
+  text-align: right;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+#login-page .btn-login {
+  display: flex;
+  padding: 10px 0px 11px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #0c3a30;
+  color: #ffdb1e;
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+#login-page p.keterangan {
+  color: rgba(12, 58, 48, 0.64);
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#login-page p.keterangan a {
+  color: #0c3a30;
+}
+#login-page img.profit {
+  position: absolute;
+  left: 100%;
+  top: 7%;
+  width: calc(29% + 18px);
+  transform: translateX(-50%);
+}
+#login-page .suriken1 {
+  top: -17%;
+  left: 101%;
+}
+#login-page .suriken2 {
+  top: 0;
+  right: calc(65% + 70px);
+  transform: translateY(-50%);
+}
+#login-page .suriken3 {
+  top: 84%;
+  left: 105%;
+}
+#login-page .error {
+  color: #d62d2d;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+@media (min-width: 992px) {
+  .filter-customer select {
+    width: 390px;
+  }
+}
+@media (min-width: 1200px) {
+  .filter-customer select {
+    width: 489.286px;
+  }
+}
+
 @media (max-width: 1199px) {
   .dashboard.navbar-nav {
     column-gap: 32px;
@@ -201,5 +579,37 @@ ul.pagination {
 @media (max-width: 991px) {
   .nav-item.dropdown > .nav-link span::after {
     display: none;
+  }
+
+  .link-stock a {
+    font-size: 16px;
+  }
+  .link-stock a .mata-uang {
+    font-size: 14px;
+  }
+  .dataTable thead th,
+  .dataTable thead td {
+    padding: 8px 24px !important;
+  }
+  #table-pos_wrapper .pagination .page-item.previous .page-link,
+  #table-pos_wrapper .pagination .page-item.next .page-link {
+    font-size: 14px;
+  }
+  #pos-total .total {
+    font-size: 28px;
+  }
+  #login-page img.profit {
+    transform: translateX(-110%);
+  }
+  #login-page h1 {
+    font-size: 28px;
+  }
+  #login-page p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  #login-page {
+    padding-top: 0;
   }
 }
